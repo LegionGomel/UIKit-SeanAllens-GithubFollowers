@@ -25,6 +25,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             UITabBar.appearance().scrollEdgeAppearance = appearance
         }
         
+        //Fix Nav Bar tint issue in iOS 15.0 or later - is transparent w/o code below
+        if #available(iOS 15, *) {
+            let appearance = UINavigationBarAppearance()
+            appearance.configureWithOpaqueBackground()
+            appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
+            appearance.backgroundColor = UIColor(red: 0.0/255.0, green: 0.0/255.0, blue: 0.0/255.0, alpha: 0.7)
+            UINavigationBar.appearance().standardAppearance = appearance
+            UINavigationBar.appearance().scrollEdgeAppearance = appearance
+        }
+        
         return true
     }
 
