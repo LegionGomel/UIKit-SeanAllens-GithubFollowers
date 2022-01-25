@@ -21,6 +21,7 @@
 		CE51652727A06C6E00016371 /* GFBodyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE51652627A06C6E00016371 /* GFBodyLabel.swift */; };
 		CE51652927A06D4400016371 /* GFAlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE51652827A06D4400016371 /* GFAlertVC.swift */; };
 		CE51652B27A06E7100016371 /* Color+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE51652A27A06E7100016371 /* Color+Ext.swift */; };
+		CE51652D27A0737700016371 /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE51652C27A0737700016371 /* UIViewController+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		CE51652627A06C6E00016371 /* GFBodyLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFBodyLabel.swift; sourceTree = "<group>"; };
 		CE51652827A06D4400016371 /* GFAlertVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFAlertVC.swift; sourceTree = "<group>"; };
 		CE51652A27A06E7100016371 /* Color+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Ext.swift"; sourceTree = "<group>"; };
+		CE51652C27A0737700016371 /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 				CE2D770127A00CA900CAED4D /* GFTextField.swift */,
 				CE51652227A0698A00016371 /* String+Ext.swift */,
 				CE51652A27A06E7100016371 /* Color+Ext.swift */,
+				CE51652C27A0737700016371 /* UIViewController+Ext.swift */,
 				CE51652427A06AF500016371 /* GFTitleLabel.swift */,
 				CE51652627A06C6E00016371 /* GFBodyLabel.swift */,
 				CE51652827A06D4400016371 /* GFAlertVC.swift */,
@@ -162,6 +165,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE2D770227A00CA900CAED4D /* GFTextField.swift in Sources */,
+				CE51652D27A0737700016371 /* UIViewController+Ext.swift in Sources */,
 				CE2D76FE279FFEAB00CAED4D /* FavoritesListVC.swift in Sources */,
 				CE2D770027A0094300CAED4D /* GFButton.swift in Sources */,
 				CE2D76FC279FFE7F00CAED4D /* SearchVC.swift in Sources */,
