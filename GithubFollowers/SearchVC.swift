@@ -17,12 +17,12 @@ class SearchVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // set adaptive background(dark for dark mode end so on)
+        // set adaptive background color(dark for dark mode end so on)
         view.backgroundColor = .systemBackground
         configureLogoImageView()
         configureTextField()
         configureCallToActionButton()
-
+        createDismissKeyboardTapGesture()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -32,6 +32,13 @@ class SearchVC: UIViewController {
          we need to hide nav bar every time, when view shows on screen
          */
         navigationController?.isNavigationBarHidden = true
+    }
+    
+    //MARK: - UI functions
+    
+    func createDismissKeyboardTapGesture() {
+        let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing))
+        view.addGestureRecognizer(tap)
     }
     
     func configureLogoImageView() {
@@ -70,6 +77,7 @@ class SearchVC: UIViewController {
         view.addSubview(callToActionButton)
         
         NSLayoutConstraint.activate([
+            // pin button relative to bottom safe area of view
             callToActionButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -50),
             callToActionButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 50),
             callToActionButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -50),
