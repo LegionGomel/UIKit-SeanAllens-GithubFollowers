@@ -60,11 +60,11 @@
 		CE2D76E6279FF15900CAED4D /* GithubFollowers */ = {
 			isa = PBXGroup;
 			children = (
-				CE2D76E7279FF15900CAED4D /* AppDelegate.swift */,
-				CE2D76E9279FF15900CAED4D /* SceneDelegate.swift */,
+				CE2D76F5279FF15A00CAED4D /* Info.plist */,
 				CE2D76F0279FF15A00CAED4D /* Assets.xcassets */,
 				CE2D76F2279FF15A00CAED4D /* LaunchScreen.storyboard */,
-				CE2D76F5279FF15A00CAED4D /* Info.plist */,
+				CE2D76E7279FF15900CAED4D /* AppDelegate.swift */,
+				CE2D76E9279FF15900CAED4D /* SceneDelegate.swift */,
 				CE2D76FB279FFE7F00CAED4D /* SearchVC.swift */,
 				CE2D76FD279FFEAB00CAED4D /* FavoritesListVC.swift */,
 				CE2D76FF27A0094300CAED4D /* GFButton.swift */,
