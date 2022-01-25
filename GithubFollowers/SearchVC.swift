@@ -14,6 +14,8 @@ class SearchVC: UIViewController {
     let logoImageView = UIImageView()
     let usernameTextField = GFTextField()
     let callToActionButton = GFButton(backgroundColor: .systemGreen, title: "Get Followers")
+    
+    var isUserNameEntered: Bool { !usernameTextField.text!.isEmpty }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +37,11 @@ class SearchVC: UIViewController {
     }
     
     @objc func pushFollowerListVC() {
+        
+        guard isUserNameEntered else {
+            return
+        }
+        
         // create object
         let followerListVC = FollowerListVC()
         // cofigure data that you want to pass
