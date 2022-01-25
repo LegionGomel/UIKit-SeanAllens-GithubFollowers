@@ -34,6 +34,16 @@ class SearchVC: UIViewController {
         navigationController?.isNavigationBarHidden = true
     }
     
+    @objc func pushFollowerListVC() {
+        // create object
+        let followerListVC = FollowerListVC()
+        // cofigure data that you want to pass
+        followerListVC.username = usernameTextField.text
+        followerListVC.title = usernameTextField.text
+        // push VC onto the stack
+        navigationController?.pushViewController(followerListVC, animated: true)
+    }
+    
     //MARK: - UI functions
     
     func createDismissKeyboardTapGesture() {
@@ -76,6 +86,8 @@ class SearchVC: UIViewController {
     
     func configureCallToActionButton() {
         view.addSubview(callToActionButton)
+        // adding a target, whenever we tap the followers button, pushFollowerListVC is going to be called (or when we tap "go" button)
+        callToActionButton.addTarget(self, action: #selector(pushFollowerListVC), for: .touchUpInside)
         
         NSLayoutConstraint.activate([
             // pin button relative to bottom safe area of view
@@ -91,6 +103,7 @@ class SearchVC: UIViewController {
 
 extension SearchVC: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        pushFollowerListVC()
         return true
     }
 }
