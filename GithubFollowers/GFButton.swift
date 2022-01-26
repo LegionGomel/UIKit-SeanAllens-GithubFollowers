@@ -20,7 +20,7 @@ class GFButton: UIButton {
     }
     
     init(backgroundColor: UIColor, title: String) {
-        super.init(frame: .zero) // we initialize frame size with auto layout (.zero for now)
+        super.init(frame: .zero) // we initialize frame size with auto layout (.zero for now, later there will be constraints added)
         self.backgroundColor = backgroundColor
         self.setTitle(title, for: .normal)
         configure()
