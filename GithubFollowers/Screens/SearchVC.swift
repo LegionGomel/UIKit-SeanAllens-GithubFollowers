@@ -33,7 +33,7 @@ class SearchVC: UIViewController {
          Because of viewDidLoad isn't calls when screen go back,
          we need to hide nav bar every time, when view shows on screen
          */
-        navigationController?.isNavigationBarHidden = true
+        navigationController?.setNavigationBarHidden(true, animated: true)
     }
     
     @objc func pushFollowerListVC() {
