@@ -31,12 +31,28 @@ class FollowerListVC: UIViewController {
     
     func configureCollectionView() {
         // view.bounds - fill up the whole view with collectionView
-        // UICollectionView - default for now
-        collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: UICollectionViewLayout())
+        collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: createThreeColumnFlowLayout())
         view.addSubview(collectionView)
         // pink for debugging
         collectionView.backgroundColor = .systemPink
         collectionView.register(FollowerCell.self, forCellWithReuseIdentifier: FollowerCell.reuseID)
+    }
+    
+    // layout tuning for collectionView
+    func createThreeColumnFlowLayout() -> UICollectionViewFlowLayout {
+        // total width of the screen
+        let width = view.bounds.width
+        // ui edge insets
+        let padding:CGFloat = 12
+        let minimumItemSpacing: CGFloat = 10
+        let availableWidth = width - (padding * 2) - (minimumItemSpacing * 2) // two minimum spacing for three columns
+        let itemWidth = availableWidth / 3
+        
+        let flowLayout = UICollectionViewFlowLayout()
+        flowLayout.sectionInset = UIEdgeInsets(top: padding, left: padding, bottom: padding, right: padding)
+        flowLayout.itemSize = CGSize(width: itemWidth, height: itemWidth + 40)
+        
+        return flowLayout
     }
     
     func getFollowers() {
