@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Follower: Codable {
+struct Follower: Codable, Hashable {
     var login: String
     // when JSON name is in snake_case, JSONDecoder can be specified to use camelCase instead for this parameter
     var avatarUrl: String
