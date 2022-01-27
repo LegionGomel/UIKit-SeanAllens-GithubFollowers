@@ -8,7 +8,7 @@
 import Foundation
 
 // enum with raw value ( all cases conform to one type (as opposite to associated values, where every case can have a different type)
-enum ErrorMessage: String {
+enum GFError: String, Error {
     
     case invalidUsername = "This username created invalid request"
     case unableToComplete = "Unable to complete your request"
