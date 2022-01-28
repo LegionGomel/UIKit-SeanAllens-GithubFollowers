@@ -9,16 +9,16 @@ import Foundation
 
 
 struct User: Codable {
-    var login: String
-    var avatarUrl: String
+    let login: String
+    let avatarUrl: String
     // user might not put real username and location, and if this is not optional - app will crash
     var name: String?
     var location: String?
     var bio: String?
-    var publicRepos: Int
-    var publicGistsL: Int
-    var htmlURL: String
-    var following: Int
-    var followers: Int
-    var createdAt: String
+    let publicRepos: Int
+    let publicGistsL: Int
+    let htmlURL: String
+    let following: Int
+    let followers: Int
+    let createdAt: String
 }
