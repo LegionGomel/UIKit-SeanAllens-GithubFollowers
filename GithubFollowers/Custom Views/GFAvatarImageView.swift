@@ -41,6 +41,11 @@ class GFAvatarImageView: UIImageView {
         // we use placeholder image as the error and not handling an errors.
         guard let url = URL(string: urlString) else { return }
         
+        /*
+         This network call is here only because we dont need to handle errors
+         for every single avatar image view, as oppose to get followers request in network manager.
+         If we do same error handling in this code, we can move it to network manager, refactor with generics and use same function for all.
+         */
         let task = URLSession.shared.dataTask(with: url) { [weak self] data, response, error in
             guard let self = self else { return }
             if let _ = error { return }
