@@ -14,6 +14,7 @@ class FollowerListVC: UIViewController {
     var username: String!
     var followers = [Follower]()
     var page = 1
+    var hasMoreFollowers = true
     
     var collectionView: UICollectionView!
     var dataSource: UICollectionViewDiffableDataSource<Section, Follower>!
@@ -46,7 +47,7 @@ class FollowerListVC: UIViewController {
     }
         
     func getFollowers(username: String, page: Int) {
-        NetworkManager.shared.getFollowers(for: username, page: 1) { [weak self] result in
+        NetworkManager.shared.getFollowers(for: username, page: page) { [weak self] result in
             /*
              we can unwrap [weak self] or write self? optional (there is also
              [unowned self] that already unwrap optional, but little more dangerous
@@ -56,7 +57,8 @@ class FollowerListVC: UIViewController {
             switch result {
                 
             case .success(let followers):
-                self.followers = followers
+                if followers.count < 100 { self.hasMoreFollowers = false }
+                self.followers.append(contentsOf: followers)
                 self.updateData()
                 
             case .failure(let error):
@@ -100,6 +102,7 @@ extension FollowerListVC: UICollectionViewDelegate {
         let height = scrollView.frame.size.height
         
         if offsetY > contentHeight - height {
+            guard hasMoreFollowers else { return }
             page += 1
             getFollowers(username: username, page: page)
         }
