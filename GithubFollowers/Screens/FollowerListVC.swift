@@ -13,6 +13,7 @@ class FollowerListVC: UIViewController {
     
     var username: String!
     var followers = [Follower]()
+    var filteredFollowers = [Follower]()
     var page = 1
     var hasMoreFollowers = true
     
@@ -49,9 +50,14 @@ class FollowerListVC: UIViewController {
     
     func configureSearchController() {
         let searchController = UISearchController()
+        // delegate to use text in search bar in custom function
         searchController.searchResultsUpdater = self
+        // delegate to append function to cancel button
+        searchController.searchBar.delegate = self
         searchController.searchBar.placeholder = "Search for a username"
         navigationItem.searchController = searchController
+        // always show search bar
+        navigationItem.hidesSearchBarWhenScrolling = false
     }
         
     func getFollowers(username: String, page: Int) {
@@ -79,7 +85,7 @@ class FollowerListVC: UIViewController {
                     return
                 }
                 
-                self.updateData()
+                self.updateData(on: self.followers)
                 
             case .failure(let error):
                 self.presentGFAlertOnMainThread(title: "Bad stuff happen", message: error.rawValue, buttonTitle: "Ok")
@@ -101,7 +107,7 @@ class FollowerListVC: UIViewController {
     
     // configure data source to use snapshots of an array of followers
     // it takes a snapshot of current data is, takes snapshot of a new data and then it converges them
-    func updateData() {
+    func updateData(on followers: [Follower]) {
         var snapshot = NSDiffableDataSourceSnapshot<Section, Follower>()
         // for snapshot to know about sections that we use:
         // (diffabledataSource uses snapshots to deal with data)
@@ -129,8 +135,18 @@ extension FollowerListVC: UICollectionViewDelegate {
     }
 }
 
-extension FollowerListVC: UISearchResultsUpdating {
+extension FollowerListVC: UISearchResultsUpdating, UISearchBarDelegate {
     func updateSearchResults(for searchController: UISearchController) {
-
+        guard let filter = searchController.searchBar.text, !filter.isEmpty else { return }
+        
+        // filtering an array of followers by text from searchbar
+        filteredFollowers = followers.filter {
+            $0.login.lowercased().contains(filter.lowercased())
+        }
+        updateData(on: filteredFollowers)
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        updateData(on: followers)
     }
 }
