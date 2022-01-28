@@ -47,7 +47,9 @@ class FollowerListVC: UIViewController {
     }
         
     func getFollowers(username: String, page: Int) {
+        //showLoadingView()
         NetworkManager.shared.getFollowers(for: username, page: page) { [weak self] result in
+            #warning("Call dismiss")
             /*
              we can unwrap [weak self] or write self? optional (there is also
              [unowned self] that already unwrap optional, but little more dangerous

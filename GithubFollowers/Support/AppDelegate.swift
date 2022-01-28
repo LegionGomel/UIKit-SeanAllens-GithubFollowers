@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let appearance = UITabBarAppearance()
             appearance.configureWithOpaqueBackground()
   
-            appearance.backgroundColor = .systemBackground
+            appearance.backgroundColor = .systemBackground.withAlphaComponent(0.85)
             UITabBar.appearance().standardAppearance = appearance
             UITabBar.appearance().scrollEdgeAppearance = appearance
         }
@@ -30,7 +30,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let appearance = UINavigationBarAppearance()
             appearance.configureWithOpaqueBackground()
             appearance.titleTextAttributes = [.foregroundColor: UIColor.label]
-            appearance.backgroundColor = .systemBackground
+            appearance.backgroundColor = .systemBackground.withAlphaComponent(0.85)
             UINavigationBar.appearance().standardAppearance = appearance
             UINavigationBar.appearance().scrollEdgeAppearance = appearance
         }
