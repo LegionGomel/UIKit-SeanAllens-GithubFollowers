@@ -31,6 +31,9 @@
 		CE51653427A14FC500016371 /* Follower.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE51653327A14FC500016371 /* Follower.swift */; };
 		CE51653627A150B800016371 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE51653527A150B800016371 /* User.swift */; };
 		CE516B5027A44A4400460791 /* UserInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE516B4F27A44A4400460791 /* UserInfoVC.swift */; };
+		CE516B5227A514E800460791 /* GFUserInfoHeaderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE516B5127A514E800460791 /* GFUserInfoHeaderVC.swift */; };
+		CE516B5427A5155800460791 /* GFSecondaryTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE516B5327A5155800460791 /* GFSecondaryTitleLabel.swift */; };
+		CE516B5627A51CC900460791 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE516B5527A51CC900460791 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +63,9 @@
 		CE51653327A14FC500016371 /* Follower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Follower.swift; sourceTree = "<group>"; };
 		CE51653527A150B800016371 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		CE516B4F27A44A4400460791 /* UserInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoVC.swift; sourceTree = "<group>"; };
+		CE516B5127A514E800460791 /* GFUserInfoHeaderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFUserInfoHeaderVC.swift; sourceTree = "<group>"; };
+		CE516B5327A5155800460791 /* GFSecondaryTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFSecondaryTitleLabel.swift; sourceTree = "<group>"; };
+		CE516B5527A51CC900460791 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +92,7 @@
 			children = (
 				CE1D453B27A1B58C00842285 /* GFError.swift */,
 				CE4A3C4A27A3C975006E5524 /* UIHelper.swift */,
+				CE516B5527A51CC900460791 /* Constants.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -126,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				CE51652827A06D4400016371 /* GFAlertVC.swift */,
+				CE516B5127A514E800460791 /* GFUserInfoHeaderVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -135,6 +143,7 @@
 			children = (
 				CE51652427A06AF500016371 /* GFTitleLabel.swift */,
 				CE51652627A06C6E00016371 /* GFBodyLabel.swift */,
+				CE516B5327A5155800460791 /* GFSecondaryTitleLabel.swift */,
 			);
 			name = Labels;
 			sourceTree = "<group>";
@@ -303,6 +312,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE516B5627A51CC900460791 /* Constants.swift in Sources */,
 				CE2D770227A00CA900CAED4D /* GFTextField.swift in Sources */,
 				CE1D453C27A1B58C00842285 /* GFError.swift in Sources */,
 				CE2D01FC27A29A5900A94DA1 /* GFAvatarImageView.swift in Sources */,
@@ -316,8 +326,10 @@
 				CE51652127A0565100016371 /* FollowerListVC.swift in Sources */,
 				CE51652B27A06E7100016371 /* Color+Ext.swift in Sources */,
 				CE51653627A150B800016371 /* User.swift in Sources */,
+				CE516B5427A5155800460791 /* GFSecondaryTitleLabel.swift in Sources */,
 				CE2D01FA27A2999D00A94DA1 /* FollowerCell.swift in Sources */,
 				CE51652927A06D4400016371 /* GFAlertVC.swift in Sources */,
+				CE516B5227A514E800460791 /* GFUserInfoHeaderVC.swift in Sources */,
 				CE27467A27A41176000D344A /* GFEmptyStateView.swift in Sources */,
 				CE2D76E8279FF15900CAED4D /* AppDelegate.swift in Sources */,
 				CE51652527A06AF500016371 /* GFTitleLabel.swift in Sources */,

@@ -16,8 +16,8 @@ struct User: Codable {
     var location: String?
     var bio: String?
     let publicRepos: Int
-    let publicGistsL: Int
-    let htmlURL: String
+    let publicGists: Int
+    let htmlUrl: String
     let following: Int
     let followers: Int
     let createdAt: String
