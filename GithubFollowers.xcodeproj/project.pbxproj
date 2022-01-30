@@ -34,6 +34,7 @@
 		CE516B5227A514E800460791 /* GFUserInfoHeaderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE516B5127A514E800460791 /* GFUserInfoHeaderVC.swift */; };
 		CE516B5427A5155800460791 /* GFSecondaryTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE516B5327A5155800460791 /* GFSecondaryTitleLabel.swift */; };
 		CE516B5627A51CC900460791 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE516B5527A51CC900460791 /* Constants.swift */; };
+		CEB0E4DC27A6825E00C012E0 /* GFItemInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB0E4DB27A6825E00C012E0 /* GFItemInfoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +67,7 @@
 		CE516B5127A514E800460791 /* GFUserInfoHeaderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFUserInfoHeaderVC.swift; sourceTree = "<group>"; };
 		CE516B5327A5155800460791 /* GFSecondaryTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFSecondaryTitleLabel.swift; sourceTree = "<group>"; };
 		CE516B5527A51CC900460791 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		CEB0E4DB27A6825E00C012E0 /* GFItemInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFItemInfoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				CE27467927A41176000D344A /* GFEmptyStateView.swift */,
+				CEB0E4DB27A6825E00C012E0 /* GFItemInfoView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -320,6 +323,7 @@
 				CE51653427A14FC500016371 /* Follower.swift in Sources */,
 				CE51652D27A0737700016371 /* UIViewController+Ext.swift in Sources */,
 				CE2D76FE279FFEAB00CAED4D /* FavoritesListVC.swift in Sources */,
+				CEB0E4DC27A6825E00C012E0 /* GFItemInfoView.swift in Sources */,
 				CE1D453927A1A85900842285 /* NetworkManager.swift in Sources */,
 				CE2D770027A0094300CAED4D /* GFButton.swift in Sources */,
 				CE2D76FC279FFE7F00CAED4D /* SearchVC.swift in Sources */,
