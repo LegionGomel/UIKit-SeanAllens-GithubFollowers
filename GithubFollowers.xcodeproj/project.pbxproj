@@ -38,6 +38,7 @@
 		CEB0E4DE27A68A0E00C012E0 /* GFItemInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB0E4DD27A68A0E00C012E0 /* GFItemInfoVC.swift */; };
 		CEB0E4E027A6C1BA00C012E0 /* GFRepoItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB0E4DF27A6C1BA00C012E0 /* GFRepoItemVC.swift */; };
 		CEB0E4E227A6C3A500C012E0 /* GFFollowerItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB0E4E127A6C3A500C012E0 /* GFFollowerItemVC.swift */; };
+		CEB0E4E527A6CA5300C012E0 /* Date+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB0E4E427A6CA5300C012E0 /* Date+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +75,7 @@
 		CEB0E4DD27A68A0E00C012E0 /* GFItemInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFItemInfoVC.swift; sourceTree = "<group>"; };
 		CEB0E4DF27A6C1BA00C012E0 /* GFRepoItemVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFRepoItemVC.swift; sourceTree = "<group>"; };
 		CEB0E4E127A6C3A500C012E0 /* GFFollowerItemVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFFollowerItemVC.swift; sourceTree = "<group>"; };
+		CEB0E4E427A6CA5300C012E0 /* Date+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -228,6 +230,7 @@
 				CE51652227A0698A00016371 /* String+Ext.swift */,
 				CE51652A27A06E7100016371 /* Color+Ext.swift */,
 				CE51652C27A0737700016371 /* UIViewController+Ext.swift */,
+				CEB0E4E427A6CA5300C012E0 /* Date+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -341,6 +344,7 @@
 				CE51652D27A0737700016371 /* UIViewController+Ext.swift in Sources */,
 				CE2D76FE279FFEAB00CAED4D /* FavoritesListVC.swift in Sources */,
 				CEB0E4DC27A6825E00C012E0 /* GFItemInfoView.swift in Sources */,
+				CEB0E4E527A6CA5300C012E0 /* Date+Ext.swift in Sources */,
 				CEB0E4DE27A68A0E00C012E0 /* GFItemInfoVC.swift in Sources */,
 				CE1D453927A1A85900842285 /* NetworkManager.swift in Sources */,
 				CE2D770027A0094300CAED4D /* GFButton.swift in Sources */,
