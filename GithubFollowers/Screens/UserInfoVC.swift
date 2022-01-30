@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import SafariServices
 
 protocol UserInfoVCDelegate: class {
     func didTapGitHubProfile(for user: User)
@@ -22,6 +21,7 @@ class UserInfoVC: UIViewController {
     var itemViews = [UIView]()
     
     var username: String!
+    weak var delegate: FollowerListVCDelegate!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -116,13 +116,15 @@ extension UserInfoVC: UserInfoVCDelegate {
             presentGFAlertOnMainThread(title: "InvalidURL", message: "The url attached to this user is invalid", buttonTitle: "Ok")
             return
         }
-        
-        let safariVC = SFSafariViewController(url: url)
-        safariVC.preferredControlTintColor = .systemGreen
-        present(safariVC, animated: true)
+        presentSafariVC(with: url)
     }
     
     func didTapGetFollowers(for user: User) {
-        // dismiss VC and tell follower list screen the new user
+        guard user.followers != 0 else {
+            presentGFAlertOnMainThread(title: "No followers", message: "This user has no followers 😞", buttonTitle: "So sad")
+            return
+        }
+        delegate.didRequestFollowers(for: user.login)
+        dismissVC()
     }
 }
