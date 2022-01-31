@@ -40,6 +40,7 @@
 		CEB0E4E227A6C3A500C012E0 /* GFFollowerItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB0E4E127A6C3A500C012E0 /* GFFollowerItemVC.swift */; };
 		CEB0E4E527A6CA5300C012E0 /* Date+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB0E4E427A6CA5300C012E0 /* Date+Ext.swift */; };
 		CEB0E4E727A8407900C012E0 /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB0E4E627A8407900C012E0 /* PersistenceManager.swift */; };
+		CEB0E4E927A8528800C012E0 /* FavoriteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB0E4E827A8528800C012E0 /* FavoriteCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +79,7 @@
 		CEB0E4E127A6C3A500C012E0 /* GFFollowerItemVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFFollowerItemVC.swift; sourceTree = "<group>"; };
 		CEB0E4E427A6CA5300C012E0 /* Date+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Ext.swift"; sourceTree = "<group>"; };
 		CEB0E4E627A8407900C012E0 /* PersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
+		CEB0E4E827A8528800C012E0 /* FavoriteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				CE2D01F927A2999D00A94DA1 /* FollowerCell.swift */,
+				CEB0E4E827A8528800C012E0 /* FavoriteCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -351,6 +354,7 @@
 				CEB0E4DE27A68A0E00C012E0 /* GFItemInfoVC.swift in Sources */,
 				CE1D453927A1A85900842285 /* NetworkManager.swift in Sources */,
 				CEB0E4E727A8407900C012E0 /* PersistenceManager.swift in Sources */,
+				CEB0E4E927A8528800C012E0 /* FavoriteCell.swift in Sources */,
 				CE2D770027A0094300CAED4D /* GFButton.swift in Sources */,
 				CEB0E4E027A6C1BA00C012E0 /* GFRepoItemVC.swift in Sources */,
 				CE2D76FC279FFE7F00CAED4D /* SearchVC.swift in Sources */,
