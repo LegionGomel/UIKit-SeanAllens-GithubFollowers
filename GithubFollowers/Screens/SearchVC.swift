@@ -15,6 +15,8 @@ class SearchVC: UIViewController {
     let usernameTextField = GFTextField()
     let callToActionButton = GFButton(backgroundColor: .systemGreen, title: "Get Followers")
     
+    var logoImageViewTopConstraint: NSLayoutConstraint
+    
     var isUserNameEntered: Bool { !usernameTextField.text!.isEmpty }
 
     override func viewDidLoad() {
@@ -68,11 +70,16 @@ class SearchVC: UIViewController {
         view.addSubview(logoImageView)
         // because this is not custom UIImageVIew (as GFButton for example), we need to add this code here.
         logoImageView.translatesAutoresizingMaskIntoConstraints = false
-        logoImageView.image = UIImage(named: "gh-logo")! // stringly-typed. can have error here. We can have it as a constant
+        logoImageView.image = Images.ghLogo
+        
+        // top constraint depending of device
+        let topConstraintConstant: CGFloat = DeviceTypes.isiPhoneSE || DeviceTypes.isiPhone8Zoomed ? 20 : 80
+        
+        logoImageViewTopConstraint = logoImageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: topConstraintConstant)
+        logoImageViewTopConstraint.isActive = true
         
         // here we add constraints. safeAreaLayoutGuide represents safe area from storyboards
         NSLayoutConstraint.activate([
-            logoImageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 80),
             logoImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             logoImageView.heightAnchor.constraint(equalToConstant: 200),
             logoImageView.widthAnchor.constraint(equalToConstant: 200)
