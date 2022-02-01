@@ -15,7 +15,7 @@ class SearchVC: UIViewController {
     let usernameTextField = GFTextField()
     let callToActionButton = GFButton(backgroundColor: .systemGreen, title: "Get Followers")
     
-    var logoImageViewTopConstraint: NSLayoutConstraint
+    var logoImageViewTopConstraint = NSLayoutConstraint()
     
     var isUserNameEntered: Bool { !usernameTextField.text!.isEmpty }
 
@@ -31,6 +31,8 @@ class SearchVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        // clear textfield every time view will appear
+        usernameTextField.text = ""
         /*
          Because of viewDidLoad isn't calls when screen go back,
          we need to hide nav bar every time, when view shows on screen
@@ -46,11 +48,12 @@ class SearchVC: UIViewController {
             return
         }
         
+        // hide keyboard when move onto next screen
+        usernameTextField.resignFirstResponder()
+        
         // create object
-        let followerListVC = FollowerListVC()
-        // cofigure data that you want to pass
-        followerListVC.username = usernameTextField.text
-        followerListVC.title = usernameTextField.text
+        let followerListVC = FollowerListVC(username: usernameTextField.text!) 
+
         // push VC onto the stack
         navigationController?.pushViewController(followerListVC, animated: true)
     }
@@ -58,7 +61,7 @@ class SearchVC: UIViewController {
     //MARK: - UI functions
     
     func createDismissKeyboardTapGesture() {
-        let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing))
+        let tap = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing))
         view.addGestureRecognizer(tap)
     }
     
