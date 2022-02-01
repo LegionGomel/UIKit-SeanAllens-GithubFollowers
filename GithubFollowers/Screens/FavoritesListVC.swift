@@ -16,6 +16,10 @@ class FavoritesListVC: UIViewController {
         super.viewDidLoad()
         configureViewController()
         configureTableView()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         getFavorites()
     }
     
