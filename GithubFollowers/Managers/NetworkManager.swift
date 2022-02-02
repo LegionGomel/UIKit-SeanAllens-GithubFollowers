@@ -80,6 +80,7 @@ class NetworkManager {
                 let decoder = JSONDecoder()
                 // because of GitHub uses snake case, we need this option for decoder
                 decoder.keyDecodingStrategy = .convertFromSnakeCase
+                decoder.dateDecodingStrategy = .iso8601
                 let user = try decoder.decode(User.self, from: data)
                 completed(.success(user))
             } catch {
