@@ -9,6 +9,6 @@ import UIKit
 
 extension UIColor {
     static var transparentBackgroundColor: UIColor {
-        UIColor(red: 0, green: 0, blue: 0, alpha: 0.75)
+        UIColor.black.withAlphaComponent(0.75)
     }
 }
