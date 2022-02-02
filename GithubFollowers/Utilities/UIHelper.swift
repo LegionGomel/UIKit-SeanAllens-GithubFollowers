@@ -7,7 +7,7 @@
 
 import UIKit
 
-struct UIHelper {
+enum UIHelper {
     
     // layout tuning for collectionView
     static func createThreeColumnFlowLayout(in view: UIView) -> UICollectionViewFlowLayout {
