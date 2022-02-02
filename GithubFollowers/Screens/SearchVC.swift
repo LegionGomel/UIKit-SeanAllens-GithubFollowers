@@ -23,6 +23,7 @@ class SearchVC: UIViewController {
         super.viewDidLoad()
         // set adaptive background color(dark for dark mode end so on)
         view.backgroundColor = .systemBackground
+        view.addSubviews(logoImageView,usernameTextField,callToActionButton)
         configureLogoImageView()
         configureTextField()
         configureCallToActionButton()
@@ -70,7 +71,7 @@ class SearchVC: UIViewController {
          this line of code is like you drag imageView from library onto
          storyboard and drop it in
          */
-        view.addSubview(logoImageView)
+        // view.addSubview(logoImageView)
         // because this is not custom UIImageVIew (as GFButton for example), we need to add this code here.
         logoImageView.translatesAutoresizingMaskIntoConstraints = false
         logoImageView.image = Images.ghLogo
@@ -90,7 +91,6 @@ class SearchVC: UIViewController {
     }
     
     func configureTextField() {
-        view.addSubview(usernameTextField)
         usernameTextField.delegate = self
         
         NSLayoutConstraint.activate([
@@ -104,7 +104,6 @@ class SearchVC: UIViewController {
     }
     
     func configureCallToActionButton() {
-        view.addSubview(callToActionButton)
         // adding a target, whenever we tap the followers button, pushFollowerListVC is going to be called (or when we tap "go" button)
         callToActionButton.addTarget(self, action: #selector(pushFollowerListVC), for: .touchUpInside)
         

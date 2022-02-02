@@ -57,12 +57,12 @@ class GFUserInfoHeaderVC: UIViewController {
     
     // example of different approach to decompose code on functions
     func addSubviews() {
-        view.addSubview(avatarImageView)
-        view.addSubview(usernameLabel)
-        view.addSubview(nameLabel)
-        view.addSubview(locationLabel)
-        view.addSubview(locationImageView)
-        view.addSubview(bioLabel)
+        view.addSubviews(avatarImageView,
+                         usernameLabel,
+                         nameLabel,
+                         locationLabel,
+                         locationImageView,
+                         bioLabel)
     }
     
     func layoutUI() {
