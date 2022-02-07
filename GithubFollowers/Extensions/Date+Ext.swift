@@ -11,7 +11,6 @@ extension Date {
     func convetToMonthYearFormat() -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "MMM yyyy"
-        
         return dateFormatter.string(from: self)
     }
 }

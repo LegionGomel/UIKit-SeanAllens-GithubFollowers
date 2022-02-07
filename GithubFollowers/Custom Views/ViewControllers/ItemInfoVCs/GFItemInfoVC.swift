@@ -23,6 +23,7 @@ class GFItemInfoVC: UIViewController {
         configureStackView()
         configureActionButton()
     }
+    
     init(user: User) {
         super.init(nibName: nil, bundle: nil)
         self.user = user

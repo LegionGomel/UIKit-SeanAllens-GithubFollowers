@@ -61,6 +61,7 @@ class UserInfoVC: GFDataLoadingVC {
                     self.configureUIElements(with: user)
                 }
                 break
+                
             case .failure(let error):
                 self.presentGFAlertOnMainThread(title: "Something went wrong", message: error.rawValue, buttonTitle: "Ok")
                 break

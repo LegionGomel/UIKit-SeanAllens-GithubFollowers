@@ -29,13 +29,18 @@ class GFUserInfoHeaderVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        addSubviews()
+        view.addSubviews(avatarImageView,
+                         usernameLabel,
+                         nameLabel,
+                         locationLabel,
+                         locationImageView,
+                         bioLabel)
         layoutUI()
         configureUIElements()
     }
     
     func configureUIElements() {
-        downloadAvatarImage()
+        avatarImageView.downloadImage(fromURL: user.avatarUrl)
         usernameLabel.text = user.login
         nameLabel.text = user.name ?? "N/A"
         locationLabel.text = user.location ?? "No location"
@@ -44,25 +49,6 @@ class GFUserInfoHeaderVC: UIViewController {
         
         locationImageView.image = SFSymbols.location
         locationImageView.tintColor = .secondaryLabel
-    }
-    
-    func downloadAvatarImage() {
-        NetworkManager.shared.downloadImage(from: user.avatarUrl) {[weak self] (image) in
-            guard self == self else { return }
-            DispatchQueue.main.async {
-                self?.avatarImageView.image = image
-            }
-        }
-    }
-    
-    // example of different approach to decompose code on functions
-    func addSubviews() {
-        view.addSubviews(avatarImageView,
-                         usernameLabel,
-                         nameLabel,
-                         locationLabel,
-                         locationImageView,
-                         bioLabel)
     }
     
     func layoutUI() {
