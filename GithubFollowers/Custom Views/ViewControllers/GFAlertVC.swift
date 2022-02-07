@@ -63,7 +63,14 @@ class GFAlertVC: UIViewController {
     
     func configureActionButton() {
         actionButton.setTitle(buttonTitle ?? "Ok", for: .normal)
-        actionButton.addTarget(self, action: #selector(dismissVC), for: .touchUpInside)
+
+        if #available(iOS 14.0, *) {
+            actionButton.addAction(UIAction(handler: { [weak self] _ in
+                self?.dismiss(animated: true)
+            }), for: .touchUpInside)
+        } else {
+            actionButton.addTarget(self, action: #selector(dismissVC), for: .touchUpInside)
+        }
         
         NSLayoutConstraint.activate([
             actionButton.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -padding),
